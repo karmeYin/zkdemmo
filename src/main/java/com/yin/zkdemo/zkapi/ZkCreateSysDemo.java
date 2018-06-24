@@ -10,7 +10,7 @@ public class ZkCreateSysDemo implements Watcher {
     private static String path="/zk_practice_sys";
     private static ZooKeeper zookeeper=null;
     public void process(WatchedEvent event) {
-        System.out.println("received watchevent:" + event);
+       // System.out.println("received watchevent:" + event);
         if(event.getState()== Event.KeeperState.SyncConnected){
             if(event.getType()== Event.EventType.None && null==event.getPath()){
                 connectedstatus.countDown();
